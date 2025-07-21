@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e52d27, #b31217);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 500px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.player {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.player--active {
+  background: rgba(255,255,255,0.3);
+}
+
+.score {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.current {
+  background: #ff0055;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.current-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.current-score {
+  font-size: 2rem;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  width: 100px;
+  display: none; /* Show via JS */
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-new {
+  top: 20px;
+}
+
+.btn-roll {
+  top: 60%;
+}
+
+.btn-hold {
+  top: 70%;
+}
+
+.player--winner {
+  background-color: #000;
+  color: #fff;
+}
